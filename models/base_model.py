@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import uuid
-import datetime
+from datetime import datetime
 
 
-class Basemodel:
+class BaseModel:
     """ Defines Basemodel class with common attributes/methods."""
     def __init__(self):
         """ Initializes a new instance of Basemode."""
@@ -13,7 +13,7 @@ class Basemodel:
 
     def __str__(self):
         """ Return a string representation of the instance. """
-        return f"[{self.__class__.name__}] ({self.id}) {self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """ updates 'updated_at' attribute with current datetime."""
