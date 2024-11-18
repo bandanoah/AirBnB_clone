@@ -154,4 +154,3 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as output:
             self.cmd.onecmd(f'BaseModel.show("{obj.id}")')
             self.assertIn(f"[BaseModel] ({obj.id})", output.getvalue())
-
